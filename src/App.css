@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* font-family: 'Roboto', sans-serif; */
+
+body{
+    font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+    font-size: 21px;
+    font-style: italic;
+    color: #2F0079;
+    margin: 1.5rem
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2{
+    font-weight: bold;
+    font-size: 21px;
+    text-align: center;
+    margin-top: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+hr{
+    color: rgba(47,0,121,0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.instructions{
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin: 3rem 0 ;
+    padding: 0 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grey{
+    height: 9rem;
+    width: 15rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px -6px rgba(0,0,0,0.15);
+}
+
+.take-photo{
+    display: flex;
+    justify-content: center;
+    background-image: url('https://res.cloudinary.com/dywatr6gy/image/upload/v1595968348/DNI-Challenge/ID_bg_xnckyv.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.take{
+    align-self: center;
+    background-color: rgb(46, 0, 121);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 24px;
+    padding: 1rem 1.5rem;
+}
+
+.white{
+    margin-top: 1rem;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.div-image{
+    background-image: url('https://res.cloudinary.com/dywatr6gy/image/upload/v1595970365/DNI-Challenge/55296404-modern-office-table-in-hipster-style-with-a-lot-of-things-around-concept-of-modern-office-interior-h_bvbgso.jpg');
+    height: 100%;
+    object-fit: contain;
+    text-align: center;
+}
+
+.background{
+    background-color: rgba(59, 57, 57, 0.76);
+    height: 100%;
+}
+
+.container{
+    padding-top: 5rem;
+}
+
+.webcam{
+    padding: 2.5rem;
+}
+
+.screenshot, .greenBorder, .redBorder{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.greenBorder{
+    border: #69CC8B solid 2px;
+}
+
+.redBorder{
+    border: #C00000 solid 2px;
+}
+
+.confirmation{
+    color: white;
+    font-size: 16px;
+}
+
+.cancel{
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.35px;
+    line-height: 24px;
+    text-decoration: none;
+    margin-top: 6rem;
 }
