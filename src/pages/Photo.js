@@ -42,7 +42,7 @@ class Photo extends Component {
 
                             { isTaken 
                                 ? <img className={validation} src={screenshot} /> 
-                                : <Webcam audio ={false} ref='webcam'/> 
+                                : <Webcam className='video' audio ={false} ref='webcam'/> 
                             }
 
                         </div> 

@@ -91,21 +91,24 @@ hr{
 }
 
 .webcam{
-    padding: 2.5rem;
+    padding: 3rem;
 }
 
-.screenshot, .greenBorder, .redBorder{
+.screenshot, 
+.greenBorder, 
+.redBorder,
+.video{
     object-fit: cover;
     width: 100%;
     border-radius: 15px;
 }
 
 .greenBorder{
-    border: #69CC8B solid 2px;
+    border: #69CC8B solid 3px;
 }
 
 .redBorder{
-    border: #C00000 solid 2px;
+    border: #C00000 solid 3px;
 }
 
 .confirmation{
@@ -121,4 +124,44 @@ hr{
     line-height: 24px;
     text-decoration: none;
     margin-top: 6rem;
+}
+
+.retake{
+    display: inline-block;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(46, 0, 121);
+    color: white;
+    font-size: 16px;
+    padding: 1rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.final-result{
+    position: absolute;
+    top: 75%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: white;
+    font-size: 15px;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.green{
+    background-color: #69CC8B;
+}
+
+.red{
+    background-color: #C00000;
 }

@@ -26,8 +26,12 @@ class Main extends Component {
                                 : <Link className='retake' to={"/photo"}>RETAKE PICTURE</Link>
                             }
                             {isCorrect 
-                                ? <p>✔ ACCEPTED</p> 
-                                : <p>X REJECTED</p> 
+                                ? <div className='final-result green'>
+                                    <p>✔ ACCEPTED</p>
+                                  </div> 
+                                : <div className='final-result red'>
+                                    <p>X REJECTED</p>
+                                  </div> 
                             }
                           </div>
                         : <div className='grey'>
