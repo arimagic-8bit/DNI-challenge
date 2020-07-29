@@ -15,7 +15,8 @@ const withPhoto = (WrappedComponent) => {
                 setPhoto,
                 style,
                 message,
-                isCorrect
+                isCorrect,
+                isRedirect
             }) => {
               return (
                 <WrappedComponent
@@ -24,6 +25,7 @@ const withPhoto = (WrappedComponent) => {
                     style={style}
                     message={message}
                     isCorrect={isCorrect}
+                    isRedirect={isRedirect}
                   {...this.props}
                 />
               );
@@ -42,6 +44,7 @@ const withPhoto = (WrappedComponent) => {
         style: '',
         message: '',
         isCorrect: null,
+        isRedirect: false
     };
   
    setPhoto = (photo) => {
@@ -53,6 +56,7 @@ const withPhoto = (WrappedComponent) => {
       let {message} = this.state;
       let borderStyle;
       let validation;
+      let redirect;
       if (outcome === "Too Much Glare"){
         borderStyle = "redBorder";
         validation = false;
@@ -61,11 +65,16 @@ const withPhoto = (WrappedComponent) => {
         borderStyle = "greenBorder";
         message = "✅ Picture taken!";
         validation = true;
+        redirect = true;
       }
-      this.setState({screenshot:photo, style:borderStyle, isCorrect:validation, message})
+      this.setState({screenshot:photo, style:borderStyle, isCorrect:validation, isRedirect: redirect, message});
+      if (this.state.validation) {
+        this.props.history.push("/")
+      }
     })
     .catch((err) => console.log(err))
    };
+
 
   
     render() {
@@ -73,7 +82,8 @@ const withPhoto = (WrappedComponent) => {
         screenshot,
         style,
         message,
-        isCorrect
+        isCorrect,
+        isRedirect
       } = this.state;
   
       const {
@@ -87,7 +97,8 @@ const withPhoto = (WrappedComponent) => {
             style,
             message,
             setPhoto,
-            isCorrect
+            isCorrect,
+            isRedirect
           }}
         >
           {this.props.children}

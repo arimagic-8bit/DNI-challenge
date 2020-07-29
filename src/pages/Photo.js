@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import Webcam from 'react-webcam';
 import {withPhoto} from "../lib/PhotoProvider"
 
@@ -28,10 +28,14 @@ class Photo extends Component {
 
     render() {
         const {isTaken, handleClick} = this.state;
-        const {screenshot, style, message} = this.props;
+        const {screenshot, style, message, isRedirect} = this.props;
         const validation = isTaken ? style : "screenshot";
 
-        return (
+        if (isRedirect){
+            return <Redirect to='/'/>;
+        }
+        else {
+           return (
             <div className='div-image'>
                 <div className='background'>
                     <div className='container'>
@@ -55,7 +59,9 @@ class Photo extends Component {
                     </div>
                 </div>
             </div>
-        )
+          ) 
+        }
+    
     }
 }
 
